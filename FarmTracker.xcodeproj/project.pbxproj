@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42B91A852DE0AFF900AAE2FD /* FarmTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91A842DE0AFF900AAE2FD /* FarmTrackerApp.swift */; };
+		42B91A872DE0AFF900AAE2FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91A862DE0AFF900AAE2FD /* ContentView.swift */; };
+		42B91A892DE0B01000AAE2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B91A882DE0B01000AAE2FD /* Assets.xcassets */; };
+		42B91A8C2DE0B01000AAE2FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B91A8B2DE0B01000AAE2FD /* Preview Assets.xcassets */; };
+		42B91A972DE0B01100AAE2FD /* FarmTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91A962DE0B01100AAE2FD /* FarmTrackerTests.swift */; };
+		42B91AA22DE0B01100AAE2FD /* FarmTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AA12DE0B01100AAE2FD /* FarmTrackerUITests.swift */; };
+		42B91AB02DE0B75700AAE2FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AAF2DE0B75700AAE2FD /* LoginView.swift */; };
+		42B91AB22DE0B78900AAE2FD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB12DE0B78900AAE2FD /* DashboardView.swift */; };
+		42B91AB42DE0B7AD00AAE2FD /* FarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB32DE0B7AD00AAE2FD /* FarmModel.swift */; };
+		42B91AB62DE0B7CC00AAE2FD /* PaddockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB52DE0B7CC00AAE2FD /* PaddockModel.swift */; };
+		42B91AB82DE0B7E000AAE2FD /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */; };
+		42B91ABA2DE0B80300AAE2FD /* PaddockMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB92DE0B80300AAE2FD /* PaddockMapView.swift */; };
+		42B91ABC2DE0B82A00AAE2FD /* PaddockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ABB2DE0B82A00AAE2FD /* PaddockListView.swift */; };
+		42B91ABE2DE0B84F00AAE2FD /* PaddockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ABD2DE0B84F00AAE2FD /* PaddockDetailView.swift */; };
+		42B91AC02DE0BBF600AAE2FD /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */; };
+		42B91AC22DE0BF2300AAE2FD /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */; };
+		42B91AC42DE0C06800AAE2FD /* AllTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AC32DE0C06800AAE2FD /* AllTasksView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42B91A932DE0B01100AAE2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B91A792DE0AFF800AAE2FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42B91A802DE0AFF800AAE2FD;
+			remoteInfo = FarmTracker;
+		};
+		42B91A9E2DE0B01100AAE2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B91A792DE0AFF800AAE2FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42B91A802DE0AFF800AAE2FD;
+			remoteInfo = FarmTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42B91A812DE0AFF900AAE2FD /* FarmTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B91A842DE0AFF900AAE2FD /* FarmTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTrackerApp.swift; sourceTree = "<group>"; };
+		42B91A862DE0AFF900AAE2FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		42B91A882DE0B01000AAE2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42B91A8B2DE0B01000AAE2FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		42B91A8D2DE0B01000AAE2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42B91A922DE0B01100AAE2FD /* FarmTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B91A962DE0B01100AAE2FD /* FarmTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTrackerTests.swift; sourceTree = "<group>"; };
+		42B91A982DE0B01100AAE2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42B91A9D2DE0B01100AAE2FD /* FarmTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B91AA12DE0B01100AAE2FD /* FarmTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTrackerUITests.swift; sourceTree = "<group>"; };
+		42B91AA32DE0B01100AAE2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42B91AAF2DE0B75700AAE2FD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		42B91AB12DE0B78900AAE2FD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		42B91AB32DE0B7AD00AAE2FD /* FarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmModel.swift; sourceTree = "<group>"; };
+		42B91AB52DE0B7CC00AAE2FD /* PaddockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddockModel.swift; sourceTree = "<group>"; };
+		42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		42B91AB92DE0B80300AAE2FD /* PaddockMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddockMapView.swift; sourceTree = "<group>"; };
+		42B91ABB2DE0B82A00AAE2FD /* PaddockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddockListView.swift; sourceTree = "<group>"; };
+		42B91ABD2DE0B84F00AAE2FD /* PaddockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddockDetailView.swift; sourceTree = "<group>"; };
+		42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		42B91AC32DE0C06800AAE2FD /* AllTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42B91A7E2DE0AFF800AAE2FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42B91A8F2DE0B01100AAE2FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42B91A9A2DE0B01100AAE2FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42B91A782DE0AFF800AAE2FD = {
+			isa = PBXGroup;
+			children = (
+				42B91A832DE0AFF900AAE2FD /* FarmTracker */,
+				42B91A952DE0B01100AAE2FD /* FarmTrackerTests */,
+				42B91AA02DE0B01100AAE2FD /* FarmTrackerUITests */,
+				42B91A822DE0AFF900AAE2FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42B91A822DE0AFF900AAE2FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42B91A812DE0AFF900AAE2FD /* FarmTracker.app */,
+				42B91A922DE0B01100AAE2FD /* FarmTrackerTests.xctest */,
+				42B91A9D2DE0B01100AAE2FD /* FarmTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42B91A832DE0AFF900AAE2FD /* FarmTracker */ = {
+			isa = PBXGroup;
+			children = (
+				42B91A842DE0AFF900AAE2FD /* FarmTrackerApp.swift */,
+				42B91A862DE0AFF900AAE2FD /* ContentView.swift */,
+				42B91A882DE0B01000AAE2FD /* Assets.xcassets */,
+				42B91A8D2DE0B01000AAE2FD /* Info.plist */,
+				42B91A8A2DE0B01000AAE2FD /* Preview Content */,
+				42B91AAF2DE0B75700AAE2FD /* LoginView.swift */,
+				42B91AB12DE0B78900AAE2FD /* DashboardView.swift */,
+				42B91AB32DE0B7AD00AAE2FD /* FarmModel.swift */,
+				42B91AB52DE0B7CC00AAE2FD /* PaddockModel.swift */,
+				42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */,
+				42B91AB92DE0B80300AAE2FD /* PaddockMapView.swift */,
+				42B91ABB2DE0B82A00AAE2FD /* PaddockListView.swift */,
+				42B91ABD2DE0B84F00AAE2FD /* PaddockDetailView.swift */,
+				42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */,
+				42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */,
+				42B91AC32DE0C06800AAE2FD /* AllTasksView.swift */,
+			);
+			path = FarmTracker;
+			sourceTree = "<group>";
+		};
+		42B91A8A2DE0B01000AAE2FD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				42B91A8B2DE0B01000AAE2FD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		42B91A952DE0B01100AAE2FD /* FarmTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				42B91A962DE0B01100AAE2FD /* FarmTrackerTests.swift */,
+				42B91A982DE0B01100AAE2FD /* Info.plist */,
+			);
+			path = FarmTrackerTests;
+			sourceTree = "<group>";
+		};
+		42B91AA02DE0B01100AAE2FD /* FarmTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				42B91AA12DE0B01100AAE2FD /* FarmTrackerUITests.swift */,
+				42B91AA32DE0B01100AAE2FD /* Info.plist */,
+			);
+			path = FarmTrackerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42B91A802DE0AFF800AAE2FD /* FarmTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42B91AA62DE0B01100AAE2FD /* Build configuration list for PBXNativeTarget "FarmTracker" */;
+			buildPhases = (
+				42B91A7D2DE0AFF800AAE2FD /* Sources */,
+				42B91A7E2DE0AFF800AAE2FD /* Frameworks */,
+				42B91A7F2DE0AFF800AAE2FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FarmTracker;
+			productName = FarmTracker;
+			productReference = 42B91A812DE0AFF900AAE2FD /* FarmTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42B91A912DE0B01100AAE2FD /* FarmTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42B91AA92DE0B01100AAE2FD /* Build configuration list for PBXNativeTarget "FarmTrackerTests" */;
+			buildPhases = (
+				42B91A8E2DE0B01100AAE2FD /* Sources */,
+				42B91A8F2DE0B01100AAE2FD /* Frameworks */,
+				42B91A902DE0B01100AAE2FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42B91A942DE0B01100AAE2FD /* PBXTargetDependency */,
+			);
+			name = FarmTrackerTests;
+			productName = FarmTrackerTests;
+			productReference = 42B91A922DE0B01100AAE2FD /* FarmTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		42B91A9C2DE0B01100AAE2FD /* FarmTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42B91AAC2DE0B01100AAE2FD /* Build configuration list for PBXNativeTarget "FarmTrackerUITests" */;
+			buildPhases = (
+				42B91A992DE0B01100AAE2FD /* Sources */,
+				42B91A9A2DE0B01100AAE2FD /* Frameworks */,
+				42B91A9B2DE0B01100AAE2FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42B91A9F2DE0B01100AAE2FD /* PBXTargetDependency */,
+			);
+			name = FarmTrackerUITests;
+			productName = FarmTrackerUITests;
+			productReference = 42B91A9D2DE0B01100AAE2FD /* FarmTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42B91A792DE0AFF800AAE2FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					42B91A802DE0AFF800AAE2FD = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					42B91A912DE0B01100AAE2FD = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 42B91A802DE0AFF800AAE2FD;
+					};
+					42B91A9C2DE0B01100AAE2FD = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 42B91A802DE0AFF800AAE2FD;
+					};
+				};
+			};
+			buildConfigurationList = 42B91A7C2DE0AFF800AAE2FD /* Build configuration list for PBXProject "FarmTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42B91A782DE0AFF800AAE2FD;
+			productRefGroup = 42B91A822DE0AFF900AAE2FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42B91A802DE0AFF800AAE2FD /* FarmTracker */,
+				42B91A912DE0B01100AAE2FD /* FarmTrackerTests */,
+				42B91A9C2DE0B01100AAE2FD /* FarmTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42B91A7F2DE0AFF800AAE2FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B91A8C2DE0B01000AAE2FD /* Preview Assets.xcassets in Resources */,
+				42B91A892DE0B01000AAE2FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42B91A902DE0B01100AAE2FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42B91A9B2DE0B01100AAE2FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42B91A7D2DE0AFF800AAE2FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B91AC02DE0BBF600AAE2FD /* AddTaskView.swift in Sources */,
+				42B91AB42DE0B7AD00AAE2FD /* FarmModel.swift in Sources */,
+				42B91AB02DE0B75700AAE2FD /* LoginView.swift in Sources */,
+				42B91ABE2DE0B84F00AAE2FD /* PaddockDetailView.swift in Sources */,
+				42B91ABC2DE0B82A00AAE2FD /* PaddockListView.swift in Sources */,
+				42B91AB62DE0B7CC00AAE2FD /* PaddockModel.swift in Sources */,
+				42B91A872DE0AFF900AAE2FD /* ContentView.swift in Sources */,
+				42B91A852DE0AFF900AAE2FD /* FarmTrackerApp.swift in Sources */,
+				42B91AB22DE0B78900AAE2FD /* DashboardView.swift in Sources */,
+				42B91AC22DE0BF2300AAE2FD /* EditTaskView.swift in Sources */,
+				42B91AC42DE0C06800AAE2FD /* AllTasksView.swift in Sources */,
+				42B91ABA2DE0B80300AAE2FD /* PaddockMapView.swift in Sources */,
+				42B91AB82DE0B7E000AAE2FD /* TaskModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42B91A8E2DE0B01100AAE2FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B91A972DE0B01100AAE2FD /* FarmTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42B91A992DE0B01100AAE2FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B91AA22DE0B01100AAE2FD /* FarmTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42B91A942DE0B01100AAE2FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42B91A802DE0AFF800AAE2FD /* FarmTracker */;
+			targetProxy = 42B91A932DE0B01100AAE2FD /* PBXContainerItemProxy */;
+		};
+		42B91A9F2DE0B01100AAE2FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42B91A802DE0AFF800AAE2FD /* FarmTracker */;
+			targetProxy = 42B91A9E2DE0B01100AAE2FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		42B91AA42DE0B01100AAE2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		42B91AA52DE0B01100AAE2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42B91AA72DE0B01100AAE2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FarmTracker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FarmTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "youngmr44-gmail.com.FarmTracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42B91AA82DE0B01100AAE2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FarmTracker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FarmTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "youngmr44-gmail.com.FarmTracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		42B91AAA2DE0B01100AAE2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FarmTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "youngmr44-gmail.com.FarmTrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmTracker.app/FarmTracker";
+			};
+			name = Debug;
+		};
+		42B91AAB2DE0B01100AAE2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FarmTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "youngmr44-gmail.com.FarmTrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmTracker.app/FarmTracker";
+			};
+			name = Release;
+		};
+		42B91AAD2DE0B01100AAE2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FarmTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "youngmr44-gmail.com.FarmTrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FarmTracker;
+			};
+			name = Debug;
+		};
+		42B91AAE2DE0B01100AAE2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FarmTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "youngmr44-gmail.com.FarmTrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FarmTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42B91A7C2DE0AFF800AAE2FD /* Build configuration list for PBXProject "FarmTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42B91AA42DE0B01100AAE2FD /* Debug */,
+				42B91AA52DE0B01100AAE2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42B91AA62DE0B01100AAE2FD /* Build configuration list for PBXNativeTarget "FarmTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42B91AA72DE0B01100AAE2FD /* Debug */,
+				42B91AA82DE0B01100AAE2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42B91AA92DE0B01100AAE2FD /* Build configuration list for PBXNativeTarget "FarmTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42B91AAA2DE0B01100AAE2FD /* Debug */,
+				42B91AAB2DE0B01100AAE2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42B91AAC2DE0B01100AAE2FD /* Build configuration list for PBXNativeTarget "FarmTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42B91AAD2DE0B01100AAE2FD /* Debug */,
+				42B91AAE2DE0B01100AAE2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42B91A792DE0AFF800AAE2FD /* Project object */;
+}
