@@ -1,39 +1,28 @@
 import SwiftUI
-import MapKit
+import CoreLocation
 
 struct DashboardView: View {
-    @State private var showMap = true
-
-    @State private var farm = Farm(
-        name: "My Farm",
-        paddocks: [
-            Paddock(name: "North", location: CLLocationCoordinate2D(latitude: -31.95, longitude: 115.86), sheepCount: 100, tasks: []),
-            Paddock(name: "South", location: CLLocationCoordinate2D(latitude: -31.96, longitude: 115.85), sheepCount: 150, tasks: [])
-        ],
-        isPremium: true
-    )
+    @State private var allTasks: [Task] = []
+    @State private var categories: [String] = []
+    @State private var showingAddTaskSheet = false
 
     var body: some View {
-        VStack {
-            Picker("View Mode", selection: $showMap) {
-                Text("Map").tag(true)
-                Text("List").tag(false)
+        NavigationView {
+            List {
+                NavigationLink("📝 All Tasks", destination: AllTasksView(tasks: $allTasks, categories: categories))
+                NavigationLink("🗺 Task Map", destination: TaskMapView(tasks: allTasks))
+                NavigationLink("🗂 Manage Categories", destination: CategoryManagerView(categories: $categories, tasks: allTasks))
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
-
-            if showMap {
-                PaddockMapView(paddocks: farm.paddocks)
-            } else {
-                PaddockListView(paddocks: farm.paddocks)
+            .listStyle(InsetGroupedListStyle())
+            .navigationTitle("FarmTrack")
+            .navigationBarItems(trailing: Button(action: {
+                showingAddTaskSheet = true
+            }) {
+                Image(systemName: "plus")
+            })
+            .sheet(isPresented: $showingAddTaskSheet) {
+                AddTaskView(tasks: $allTasks, categories: $categories)
             }
-            
-            NavigationLink(destination: AllTasksView(farm: farm)) {
-                Text("All Tasks")
-            }
-            .padding(.bottom)
-
         }
-        .navigationTitle(farm.name)
     }
 }
