@@ -14,17 +14,15 @@
 		42B91A972DE0B01100AAE2FD /* FarmTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91A962DE0B01100AAE2FD /* FarmTrackerTests.swift */; };
 		42B91AA22DE0B01100AAE2FD /* FarmTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AA12DE0B01100AAE2FD /* FarmTrackerUITests.swift */; };
 		42B91AB02DE0B75700AAE2FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AAF2DE0B75700AAE2FD /* LoginView.swift */; };
-		42B91AB22DE0B78900AAE2FD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB12DE0B78900AAE2FD /* DashboardView.swift */; };
-		42B91AB42DE0B7AD00AAE2FD /* FarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB32DE0B7AD00AAE2FD /* FarmModel.swift */; };
-		42B91AB62DE0B7CC00AAE2FD /* PaddockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB52DE0B7CC00AAE2FD /* PaddockModel.swift */; };
+		42B91AB22DE0B78900AAE2FD /* TaskDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB12DE0B78900AAE2FD /* TaskDashboardView.swift */; };
 		42B91AB82DE0B7E000AAE2FD /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */; };
 		42B91ABA2DE0B80300AAE2FD /* TaskMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB92DE0B80300AAE2FD /* TaskMapView.swift */; };
-		42B91ABC2DE0B82A00AAE2FD /* PaddockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ABB2DE0B82A00AAE2FD /* PaddockListView.swift */; };
-		42B91ABE2DE0B84F00AAE2FD /* PaddockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ABD2DE0B84F00AAE2FD /* PaddockDetailView.swift */; };
 		42B91AC02DE0BBF600AAE2FD /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */; };
 		42B91AC22DE0BF2300AAE2FD /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */; };
 		42B91AC42DE0C06800AAE2FD /* AllTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AC32DE0C06800AAE2FD /* AllTasksView.swift */; };
 		42B91AC62DE20A4B00AAE2FD /* CategoryManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AC52DE20A4B00AAE2FD /* CategoryManagerView.swift */; };
+		42B91ACC2DE34D6000AAE2FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ACB2DE34D6000AAE2FD /* HomeView.swift */; };
+		42B91ACE2DE34F7E00AAE2FD /* FeedDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ACD2DE34F7E00AAE2FD /* FeedDashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,17 +56,15 @@
 		42B91AA12DE0B01100AAE2FD /* FarmTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTrackerUITests.swift; sourceTree = "<group>"; };
 		42B91AA32DE0B01100AAE2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42B91AAF2DE0B75700AAE2FD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		42B91AB12DE0B78900AAE2FD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		42B91AB32DE0B7AD00AAE2FD /* FarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmModel.swift; sourceTree = "<group>"; };
-		42B91AB52DE0B7CC00AAE2FD /* PaddockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddockModel.swift; sourceTree = "<group>"; };
+		42B91AB12DE0B78900AAE2FD /* TaskDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDashboardView.swift; sourceTree = "<group>"; };
 		42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		42B91AB92DE0B80300AAE2FD /* TaskMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMapView.swift; sourceTree = "<group>"; };
-		42B91ABB2DE0B82A00AAE2FD /* PaddockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddockListView.swift; sourceTree = "<group>"; };
-		42B91ABD2DE0B84F00AAE2FD /* PaddockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddockDetailView.swift; sourceTree = "<group>"; };
 		42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 		42B91AC32DE0C06800AAE2FD /* AllTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksView.swift; sourceTree = "<group>"; };
 		42B91AC52DE20A4B00AAE2FD /* CategoryManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManagerView.swift; sourceTree = "<group>"; };
+		42B91ACB2DE34D6000AAE2FD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		42B91ACD2DE34F7E00AAE2FD /* FeedDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,23 +115,14 @@
 		42B91A832DE0AFF900AAE2FD /* FarmTracker */ = {
 			isa = PBXGroup;
 			children = (
+				42B91AC82DE34CFF00AAE2FD /* Models */,
+				42B91AC72DE34CE800AAE2FD /* Views */,
 				42B91A842DE0AFF900AAE2FD /* FarmTrackerApp.swift */,
 				42B91A862DE0AFF900AAE2FD /* ContentView.swift */,
 				42B91A882DE0B01000AAE2FD /* Assets.xcassets */,
 				42B91A8D2DE0B01000AAE2FD /* Info.plist */,
 				42B91A8A2DE0B01000AAE2FD /* Preview Content */,
 				42B91AAF2DE0B75700AAE2FD /* LoginView.swift */,
-				42B91AB12DE0B78900AAE2FD /* DashboardView.swift */,
-				42B91AB32DE0B7AD00AAE2FD /* FarmModel.swift */,
-				42B91AB52DE0B7CC00AAE2FD /* PaddockModel.swift */,
-				42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */,
-				42B91AB92DE0B80300AAE2FD /* TaskMapView.swift */,
-				42B91ABB2DE0B82A00AAE2FD /* PaddockListView.swift */,
-				42B91ABD2DE0B84F00AAE2FD /* PaddockDetailView.swift */,
-				42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */,
-				42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */,
-				42B91AC32DE0C06800AAE2FD /* AllTasksView.swift */,
-				42B91AC52DE20A4B00AAE2FD /* CategoryManagerView.swift */,
 			);
 			path = FarmTracker;
 			sourceTree = "<group>";
@@ -164,6 +151,45 @@
 				42B91AA32DE0B01100AAE2FD /* Info.plist */,
 			);
 			path = FarmTrackerUITests;
+			sourceTree = "<group>";
+		};
+		42B91AC72DE34CE800AAE2FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42B91ACA2DE34D3600AAE2FD /* Feed */,
+				42B91AC92DE34D1100AAE2FD /* Tasks */,
+				42B91ACB2DE34D6000AAE2FD /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42B91AC82DE34CFF00AAE2FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42B91AC92DE34D1100AAE2FD /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				42B91AC52DE20A4B00AAE2FD /* CategoryManagerView.swift */,
+				42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */,
+				42B91AC32DE0C06800AAE2FD /* AllTasksView.swift */,
+				42B91AB92DE0B80300AAE2FD /* TaskMapView.swift */,
+				42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */,
+				42B91AB12DE0B78900AAE2FD /* TaskDashboardView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		42B91ACA2DE34D3600AAE2FD /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				42B91ACD2DE34F7E00AAE2FD /* FeedDashboardView.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,15 +322,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				42B91AC02DE0BBF600AAE2FD /* AddTaskView.swift in Sources */,
-				42B91AB42DE0B7AD00AAE2FD /* FarmModel.swift in Sources */,
 				42B91AB02DE0B75700AAE2FD /* LoginView.swift in Sources */,
-				42B91ABE2DE0B84F00AAE2FD /* PaddockDetailView.swift in Sources */,
+				42B91ACC2DE34D6000AAE2FD /* HomeView.swift in Sources */,
 				42B91AC62DE20A4B00AAE2FD /* CategoryManagerView.swift in Sources */,
-				42B91ABC2DE0B82A00AAE2FD /* PaddockListView.swift in Sources */,
-				42B91AB62DE0B7CC00AAE2FD /* PaddockModel.swift in Sources */,
 				42B91A872DE0AFF900AAE2FD /* ContentView.swift in Sources */,
+				42B91ACE2DE34F7E00AAE2FD /* FeedDashboardView.swift in Sources */,
 				42B91A852DE0AFF900AAE2FD /* FarmTrackerApp.swift in Sources */,
-				42B91AB22DE0B78900AAE2FD /* DashboardView.swift in Sources */,
+				42B91AB22DE0B78900AAE2FD /* TaskDashboardView.swift in Sources */,
 				42B91AC22DE0BF2300AAE2FD /* EditTaskView.swift in Sources */,
 				42B91AC42DE0C06800AAE2FD /* AllTasksView.swift in Sources */,
 				42B91ABA2DE0B80300AAE2FD /* TaskMapView.swift in Sources */,

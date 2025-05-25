@@ -1,7 +1,7 @@
 import SwiftUI
 import CoreLocation
 
-struct DashboardView: View {
+struct TaskDashboardView: View {
     @State private var allTasks: [Task] = []
     @State private var categories: [String] = []
     @State private var showingAddTaskSheet = false
@@ -14,7 +14,7 @@ struct DashboardView: View {
                 NavigationLink("🗂 Manage Categories", destination: CategoryManagerView(categories: $categories, tasks: allTasks))
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationTitle("FarmTrack")
+            .navigationTitle("Task Tracker")
             .navigationBarItems(trailing: Button(action: {
                 showingAddTaskSheet = true
             }) {

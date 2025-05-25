@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  FarmTracker
-//
-//  Created by Katy Bruinsma on 23/5/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -13,7 +6,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             if isAuthenticated {
-                DashboardView()
+                HomeView() 
             } else {
                 LoginView(isAuthenticated: $isAuthenticated)
             }
