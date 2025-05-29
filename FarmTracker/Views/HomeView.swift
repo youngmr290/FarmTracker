@@ -16,7 +16,7 @@ struct HomeView: View {
                     NavigationLink(
                         destination: FeedDashboardView(),
                         label: {
-                            Text("🥩 Feed Tracker")
+                            Text("🐑 Feed Tracker")
                         }
                     )
                 }

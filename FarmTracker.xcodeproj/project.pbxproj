@@ -23,6 +23,12 @@
 		42B91AC62DE20A4B00AAE2FD /* CategoryManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AC52DE20A4B00AAE2FD /* CategoryManagerView.swift */; };
 		42B91ACC2DE34D6000AAE2FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ACB2DE34D6000AAE2FD /* HomeView.swift */; };
 		42B91ACE2DE34F7E00AAE2FD /* FeedDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ACD2DE34F7E00AAE2FD /* FeedDashboardView.swift */; };
+		42B91AD02DE8846C00AAE2FD /* AddEditPaddockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ACF2DE8846C00AAE2FD /* AddEditPaddockView.swift */; };
+		42B91AD22DE88ADD00AAE2FD /* FeedPaddockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AD12DE88ADD00AAE2FD /* FeedPaddockModel.swift */; };
+		42B91AD42DE88E8200AAE2FD /* FeedLogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AD32DE88E8200AAE2FD /* FeedLogEntry.swift */; };
+		42B91AD62DE88F5500AAE2FD /* LogFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AD52DE88F5500AAE2FD /* LogFeedView.swift */; };
+		42B91AD82DE88F9D00AAE2FD /* FeedSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AD72DE88F9D00AAE2FD /* FeedSummaryView.swift */; };
+		42B91ADA2DE89BE500AAE2FD /* ListManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AD92DE89BE500AAE2FD /* ListManagerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,12 @@
 		42B91AC52DE20A4B00AAE2FD /* CategoryManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManagerView.swift; sourceTree = "<group>"; };
 		42B91ACB2DE34D6000AAE2FD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		42B91ACD2DE34F7E00AAE2FD /* FeedDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDashboardView.swift; sourceTree = "<group>"; };
+		42B91ACF2DE8846C00AAE2FD /* AddEditPaddockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditPaddockView.swift; sourceTree = "<group>"; };
+		42B91AD12DE88ADD00AAE2FD /* FeedPaddockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPaddockModel.swift; sourceTree = "<group>"; };
+		42B91AD32DE88E8200AAE2FD /* FeedLogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLogEntry.swift; sourceTree = "<group>"; };
+		42B91AD52DE88F5500AAE2FD /* LogFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFeedView.swift; sourceTree = "<group>"; };
+		42B91AD72DE88F9D00AAE2FD /* FeedSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSummaryView.swift; sourceTree = "<group>"; };
+		42B91AD92DE89BE500AAE2FD /* ListManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManagerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */,
+				42B91AD12DE88ADD00AAE2FD /* FeedPaddockModel.swift */,
+				42B91AD32DE88E8200AAE2FD /* FeedLogEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +202,10 @@
 			isa = PBXGroup;
 			children = (
 				42B91ACD2DE34F7E00AAE2FD /* FeedDashboardView.swift */,
+				42B91ACF2DE8846C00AAE2FD /* AddEditPaddockView.swift */,
+				42B91AD52DE88F5500AAE2FD /* LogFeedView.swift */,
+				42B91AD72DE88F9D00AAE2FD /* FeedSummaryView.swift */,
+				42B91AD92DE89BE500AAE2FD /* ListManagerView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -323,14 +341,20 @@
 			files = (
 				42B91AC02DE0BBF600AAE2FD /* AddTaskView.swift in Sources */,
 				42B91AB02DE0B75700AAE2FD /* LoginView.swift in Sources */,
+				42B91ADA2DE89BE500AAE2FD /* ListManagerView.swift in Sources */,
 				42B91ACC2DE34D6000AAE2FD /* HomeView.swift in Sources */,
 				42B91AC62DE20A4B00AAE2FD /* CategoryManagerView.swift in Sources */,
+				42B91AD22DE88ADD00AAE2FD /* FeedPaddockModel.swift in Sources */,
 				42B91A872DE0AFF900AAE2FD /* ContentView.swift in Sources */,
 				42B91ACE2DE34F7E00AAE2FD /* FeedDashboardView.swift in Sources */,
+				42B91AD42DE88E8200AAE2FD /* FeedLogEntry.swift in Sources */,
 				42B91A852DE0AFF900AAE2FD /* FarmTrackerApp.swift in Sources */,
 				42B91AB22DE0B78900AAE2FD /* TaskDashboardView.swift in Sources */,
 				42B91AC22DE0BF2300AAE2FD /* EditTaskView.swift in Sources */,
 				42B91AC42DE0C06800AAE2FD /* AllTasksView.swift in Sources */,
+				42B91AD02DE8846C00AAE2FD /* AddEditPaddockView.swift in Sources */,
+				42B91AD62DE88F5500AAE2FD /* LogFeedView.swift in Sources */,
+				42B91AD82DE88F9D00AAE2FD /* FeedSummaryView.swift in Sources */,
 				42B91ABA2DE0B80300AAE2FD /* TaskMapView.swift in Sources */,
 				42B91AB82DE0B7E000AAE2FD /* TaskModel.swift in Sources */,
 			);
