@@ -13,7 +13,6 @@ struct FeedDashboardView: View {
     private var paddocks: FetchedResults<FeedPaddock>
     
     // The rest of your state remains the same
-    @State private var feedLogs: [FeedLogEntry] = []
     @State private var livestockTypes: [String] = ["Ewes", "Lambs", "Wethers"]
     @State private var feedTypes: [String] = ["Hay", "Straw", "Lupins", "Oats", "Barley"]
     
@@ -39,7 +38,6 @@ struct FeedDashboardView: View {
 
                 NavigationLink(
                     destination: FeedSummaryView(
-                        logs: feedLogs,
                         livestockTypes: livestockTypes,
                         feedTypes: feedTypes
                     )
@@ -92,8 +90,8 @@ struct FeedDashboardView: View {
                 .environment(\.managedObjectContext, ctx)
         }
         .sheet(isPresented: $showLogSheet) {
-            LogFeedView(feedLogs: $feedLogs,
-                        feedTypes: feedTypes)
+            LogFeedView(feedTypes: feedTypes)
+                .environment(\.managedObjectContext, ctx)
         }
         .sheet(isPresented: $showLivestockEditor) {
             ListManagerView(title: "Livestock Types", items: $livestockTypes)

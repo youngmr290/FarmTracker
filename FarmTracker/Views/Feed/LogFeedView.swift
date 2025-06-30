@@ -3,18 +3,20 @@ import CoreData                // ← for NSManagedObjectContext
 
 struct LogFeedView: View {
     // ▸ Core-Data paddocks (fetched in here rather than passed in)
-    @Environment(\.managedObjectContext) private var ctx
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \FeedPaddock.name, ascending: true)],
         predicate: NSPredicate(format: "farmId == %@", "local-farm")
     )
     private var paddocks: FetchedResults<FeedPaddock>
 
-    // the logs are still plain in-memory for now
-    @Binding var feedLogs: [FeedLogEntry]
+    //core data context
+    @Environment(\.managedObjectContext) private var ctx
+    @Environment(\.presentationMode) private var presentationMode
+    
     var feedTypes: [String]
 
-    @Environment(\.presentationMode) private var presentationMode
+    
 
     @State private var selectedPaddock: FeedPaddock?
     @State private var selectedFeedType = ""
@@ -67,15 +69,26 @@ struct LogFeedView: View {
                         !selectedFeedType.isEmpty
                     else { return }
 
-                    // still append to in-memory array for now
-                    let log = FeedLogEntry(
-                        paddockName: paddock.name ?? "",
-                        livestockType: paddock.livestockType ?? "",
-                        feedType: selectedFeedType,
-                        amountKg: amount,
-                        date: date
-                    )
-                    feedLogs.append(log)
+                    // ➜  insert Core-Data log
+                    let log = FeedLogEntry(context: ctx)
+                    log.id             = UUID()
+                    log.paddockName    = paddock.name ?? ""
+                    log.livestockType  = paddock.livestockType
+                    log.feedType       = selectedFeedType
+                    log.amountKg       = amount
+                    log.date           = date
+                    log.farmId         = "local-farm"
+                    log.updatedAt      = Date()
+
+                    do {
+                        try ctx.save()
+                        print("✅ Saved log entry.")
+                    } catch {
+                        print("❌ Failed to save context: \(error.localizedDescription)")
+                    }
+
+                    
+                    
                     presentationMode.wrappedValue.dismiss()
                 }
                 .disabled(selectedPaddock == nil || selectedFeedType.isEmpty)

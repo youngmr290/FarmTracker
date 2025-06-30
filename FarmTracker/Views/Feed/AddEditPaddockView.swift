@@ -4,22 +4,26 @@ import CoreData
 struct AddEditPaddockView: View {
     @Environment(\.presentationMode) private var presentationMode
     @Environment(\.managedObjectContext) private var ctx
-
+    
     @Binding var livestockTypes: [String]
     @Binding var feedTypes: [String]
     
-    // form state
+    // ── form state ──────────────────────────────────────────
     @State private var name: String = ""
     @State private var selectedLivestock: String = "Ewes"
     @State private var selectedFeedType: String = "Hay"
-    @State private var numberOfAnimals: Int = 100
-    @State private var feedTarget: Double = 500
+    
+    // text versions so they update in real-time
+    @State private var numberOfAnimalsText: String = "100"
+    @State private var feedTargetText:     String = "500"
+    
     @State private var frequencyDays: Int = 1
-
+    
+    // ── body ────────────────────────────────────────────────
     var body: some View {
         NavigationView {
             Form {
-                // --- paddock info ---
+                // ── paddock info ───────────────────────────
                 Section(header: Text("Paddock Info")) {
                     TextField("Paddock Name", text: $name)
                     
@@ -32,12 +36,12 @@ struct AddEditPaddockView: View {
                     }
                 }
                 
-                // --- feeding info ---
+                // ── feeding info ───────────────────────────
                 Section(header: Text("Feeding Info")) {
                     HStack {
                         Text("Number of Animals:")
                         Spacer()
-                        TextField("", value: $numberOfAnimals, formatter: NumberFormatter())
+                        TextField("", text: $numberOfAnimalsText)
                             .keyboardType(.numberPad)
                             .frame(width: 80)
                     }
@@ -45,7 +49,7 @@ struct AddEditPaddockView: View {
                     HStack {
                         Text("Target Feed (g/hd/d):")
                         Spacer()
-                        TextField("", value: $feedTarget, formatter: NumberFormatter())
+                        TextField("", text: $feedTargetText)
                             .keyboardType(.decimalPad)
                             .frame(width: 80)
                     }
@@ -55,20 +59,39 @@ struct AddEditPaddockView: View {
                     }
                 }
                 
-                // --- save ---
+                // ── save ───────────────────────────────────
                 Button("Save") {
+                    // dismiss keyboard (optional)
+                    UIApplication.shared.sendAction(
+                        #selector(UIResponder.resignFirstResponder),
+                        to: nil, from: nil, for: nil
+                    )
+                    
+                    // convert strings → numbers
+                    guard
+                        let animals = Int(numberOfAnimalsText),
+                        let target  = Double(feedTargetText)
+                    else {
+                        print("❌ Invalid numbers – not saving")
+                        return
+                    }
+                    
+                    print("🐑 animals:", animals, "target:", target)
+                    
                     let p = FeedPaddock(context: ctx)
                     p.id = UUID()
                     p.name = name
                     p.livestockType = selectedLivestock
-                    p.numberOfAnimals = Int32(numberOfAnimals)
-                    p.feedTargetGramsPerHdPerDay = feedTarget
+                    p.numberOfAnimals = Int32(animals)
+                    p.feedTargetGramsPerHdPerDay = target
                     p.feedingFrequencyDays = Int32(frequencyDays)
                     p.feedType = selectedFeedType
                     p.farmId  = "local-farm"
                     p.updatedAt = Date()
                     
-                    try? ctx.save()
+                    do { try ctx.save() }
+                    catch { print("❌ save failed:", error.localizedDescription) }
+                    
                     presentationMode.wrappedValue.dismiss()
                 }
                 .disabled(name.isEmpty)

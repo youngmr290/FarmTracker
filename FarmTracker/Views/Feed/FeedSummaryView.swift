@@ -3,9 +3,14 @@ import CoreData
 
 struct FeedSummaryView: View {
     // ⛽ In-memory logs for now
-    var logs: [FeedLogEntry]
     var livestockTypes: [String]
     var feedTypes: [String]
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \FeedLogEntry.date, ascending: false)],
+        predicate: NSPredicate(format: "farmId == %@", "local-farm")
+    ) private var logs: FetchedResults<FeedLogEntry>
+
 
     // 🧠 Core Data paddocks
     @FetchRequest(
@@ -28,10 +33,12 @@ struct FeedSummaryView: View {
 
     private var filteredLogs: [FeedLogEntry] {
         logs.filter { log in
-            (selectedPaddock.isEmpty || log.paddockName == selectedPaddock) &&
-            (selectedLivestockType.isEmpty || log.livestockType == selectedLivestockType) &&
-            (selectedFeedType.isEmpty || log.feedType == selectedFeedType) &&
-            (log.date >= startDate && log.date <= endDate)
+            guard let logDate = log.date else { return false }
+            return
+                (selectedPaddock.isEmpty || log.paddockName == selectedPaddock) &&
+                (selectedLivestockType.isEmpty || log.livestockType == selectedLivestockType) &&
+                (selectedFeedType.isEmpty || log.feedType == selectedFeedType) &&
+                (logDate >= startDate && logDate <= endDate+1)
         }
     }
 
@@ -79,9 +86,9 @@ struct FeedSummaryView: View {
             Section(header: Text("Entries")) {
                 List(filteredLogs) { log in
                     VStack(alignment: .leading) {
-                        Text("\(log.paddockName) — \(log.feedType)")
+                        Text("\((log.paddockName ?? "")) — \((log.feedType ?? ""))")
                             .font(.headline)
-                        Text("Date: \(dateFormatter.string(from: log.date))")
+                        Text("Date: \(dateFormatter.string(from: log.date ?? Date.distantPast))")
                         Text(String(format: "%.1f kg", log.amountKg))
                     }
                 }
