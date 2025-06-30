@@ -1,11 +1,19 @@
 import SwiftUI
+import CoreData
 
 struct FeedSummaryView: View {
+    // ⛽ In-memory logs for now
     var logs: [FeedLogEntry]
-    var paddocks: [FeedPaddock]
     var livestockTypes: [String]
     var feedTypes: [String]
 
+    // 🧠 Core Data paddocks
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \FeedPaddock.name, ascending: true)],
+        predicate: NSPredicate(format: "farmId == %@", "local-farm")
+    ) private var paddocks: FetchedResults<FeedPaddock>
+
+    // 🔍 Filters
     @State private var selectedPaddock: String = ""
     @State private var selectedLivestockType: String = ""
     @State private var selectedFeedType: String = ""
@@ -37,7 +45,7 @@ struct FeedSummaryView: View {
             Section(header: Text("Filters")) {
                 Picker("Paddock", selection: $selectedPaddock) {
                     Text("All").tag("")
-                    ForEach(paddocks.map { $0.name }, id: \.self) {
+                    ForEach(paddocks.map { $0.name ?? "Unnamed" }, id: \.self) {
                         Text($0)
                     }
                 }
