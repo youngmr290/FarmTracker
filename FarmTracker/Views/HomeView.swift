@@ -22,7 +22,21 @@ struct HomeView: View {
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationTitle("FarmTrack")
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack(spacing: 8) {
+                        Image("logo-nobackground-1000")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 58)
+
+                        Text("FarmTrack")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                }
+
+            }
         }
     }
 }
