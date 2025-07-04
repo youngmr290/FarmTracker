@@ -1,10 +1,14 @@
 import SwiftUI
 import MapKit
+import CoreData
 
 struct AddTaskView: View {
     @Environment(\.presentationMode) var presentationMode
-    @Binding var tasks: [Task]
-    @Binding var categories: [String]
+    @Environment(\.managedObjectContext) private var ctx
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Category.name, ascending: true)]
+    ) private var categories: FetchedResults<Category>
 
     @State private var title = ""
     @State private var dueDate = Date()
@@ -16,10 +20,9 @@ struct AddTaskView: View {
         center: CLLocationCoordinate2D(latitude: -31.95, longitude: 115.86),
         span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
     )
-    
-    @State private var selectedCategory: String = ""
-    @State private var newCategory: String = ""
 
+    @State private var selectedCategoryID: NSManagedObjectID? = nil
+    @State private var newCategory: String = ""
 
     var body: some View {
         NavigationView {
@@ -57,11 +60,15 @@ struct AddTaskView: View {
                         }
                     }
                 }
-                
+
+                // MARK: Category Section
                 Section(header: Text("Category (Optional)")) {
-                    Picker("Select Existing", selection: $selectedCategory) {
-                        Text("None").tag("")
-                        ForEach(categories, id: \.self, content: Text.init)
+                    Picker("Select Existing", selection: $selectedCategoryID) {
+                        Text("None").tag(nil as NSManagedObjectID?)
+                        ForEach(categories, id: \.objectID) { category in
+                            Text(category.name ?? "Unnamed")
+                                .tag(category.objectID as NSManagedObjectID?)
+                        }
                     }
 
                     TextField("Or Add New Category", text: $newCategory)
@@ -70,26 +77,38 @@ struct AddTaskView: View {
                 // MARK: Save Button
                 Section {
                     Button("Save Task") {
-                        let categoryToUse: String? = {
-                            if !newCategory.isEmpty {
-                                if !categories.contains(newCategory) {
-                                    categories.append(newCategory)
-                                }
-                                return newCategory
-                            } else if !selectedCategory.isEmpty {
-                                return selectedCategory
-                            } else {
-                                return nil
-                            }
-                        }()
+                        print("🟢 Save button tapped")
 
-                        let task = Task(
-                            title: title,
-                            dueDate: includeDueDate ? dueDate : nil,
-                            coordinate: includeLocation ? selectedCoordinate : nil,
-                            category: categoryToUse
-                        )
-                        tasks.append(task)
+                        let task = TaskEntry(context: ctx)
+                        task.farmId = "local-farm"
+                        task.updatedAt = Date()
+                        task.title = title
+                        task.dueDate = includeDueDate ? dueDate : nil
+                        task.isCompleted = false
+                        task.id = UUID()
+
+                        if let coord = selectedCoordinate {
+                            task.latitude = coord.latitude
+                            task.longitude = coord.longitude
+                        }
+
+                        if !newCategory.isEmpty {
+                            let category = Category(context: ctx)
+                            category.name = newCategory
+                            category.id = UUID()
+                            task.category = category
+                        } else if let id = selectedCategoryID,
+                                  let picked = categories.first(where: { $0.objectID == id }) {
+                            task.category = picked
+                        }
+
+                        do {
+                            try ctx.save()
+                            print("✅ Save succeeded")
+                        } catch {
+                            print("❌ Save failed: \(error)")
+                        }
+
                         presentationMode.wrappedValue.dismiss()
                     }
                     .disabled(title.isEmpty)
@@ -102,7 +121,6 @@ struct AddTaskView: View {
         }
     }
 
-    // MARK: Pin Wrapper for Map
     struct MapPinLocation: Identifiable {
         let id = UUID()
         let coordinate: CLLocationCoordinate2D

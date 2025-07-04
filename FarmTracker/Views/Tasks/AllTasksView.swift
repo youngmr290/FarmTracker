@@ -1,4 +1,5 @@
 import SwiftUI
+import CoreData
 
 enum TaskFilter: String, CaseIterable, Identifiable {
     case all = "All"
@@ -10,17 +11,25 @@ enum TaskFilter: String, CaseIterable, Identifiable {
 }
 
 struct AllTasksView: View {
-    @Binding var tasks: [Task]
-    var categories: [String]
+    @Environment(\.managedObjectContext) private var ctx
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \TaskEntry.dueDate, ascending: true)],
+        animation: .default
+    ) private var allTasks: FetchedResults<TaskEntry>
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Category.name, ascending: true)]
+    ) private var categories: FetchedResults<Category>
 
     @State private var filter: TaskFilter = .all
-    @State private var selectedCategory: String = ""
+    @State private var selectedCategory: Category?
 
-    private var filteredTasks: [Task] {
-        tasks.filter { task in
-            let passesCategory = selectedCategory.isEmpty || task.category == selectedCategory
+    private var filteredTasks: [TaskEntry] {
+        allTasks.filter { task in
+            let matchesCategory = selectedCategory == nil || task.category == selectedCategory
 
-            let passesFilter: Bool = {
+            let matchesFilter: Bool = {
                 switch filter {
                 case .all:
                     return true
@@ -35,7 +44,7 @@ struct AllTasksView: View {
                 }
             }()
 
-            return passesCategory && passesFilter
+            return matchesCategory && matchesFilter
         }
     }
 
@@ -50,9 +59,9 @@ struct AllTasksView: View {
             .padding()
 
             Picker("Category", selection: $selectedCategory) {
-                Text("All Categories").tag("")
-                ForEach(categories, id: \.self) { category in
-                    Text(category).tag(category)
+                Text("All Categories").tag(Category?.none)
+                ForEach(categories) { category in
+                    Text(category.name ?? "").tag(Optional(category))
                 }
             }
             .pickerStyle(MenuPickerStyle())
@@ -62,16 +71,15 @@ struct AllTasksView: View {
                 ForEach(filteredTasks) { task in
                     HStack {
                         Button(action: {
-                            if let index = tasks.firstIndex(where: { $0.id == task.id }) {
-                                tasks[index].isCompleted.toggle()
-                            }
+                            task.isCompleted.toggle()
+                            try? ctx.save()
                         }) {
                             Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
                                 .foregroundColor(task.isCompleted ? .green : .gray)
                         }
 
                         VStack(alignment: .leading) {
-                            Text(task.title)
+                            Text(task.title ?? "")
                                 .font(.headline)
                                 .strikethrough(task.isCompleted)
 
@@ -81,14 +89,14 @@ struct AllTasksView: View {
                                     .foregroundColor(.gray)
                             }
 
-                            if task.coordinate != nil {
+                            if task.latitude != 0 || task.longitude != 0 {
                                 Text("📍 Location set")
                                     .font(.caption2)
                                     .foregroundColor(.blue)
                             }
 
                             if let cat = task.category {
-                                Text("📂 \(cat)")
+                                Text("📂 \(cat.name ?? "")")
                                     .font(.caption2)
                                     .foregroundColor(.orange)
                             }
@@ -102,10 +110,11 @@ struct AllTasksView: View {
     }
 
     private func deleteTask(at offsets: IndexSet) {
-        let taskIDsToDelete = offsets.map { filteredTasks[$0].id }
-        tasks.removeAll { task in
-            taskIDsToDelete.contains(task.id)
+        for index in offsets {
+            let task = filteredTasks[index]
+            ctx.delete(task)
         }
+        try? ctx.save()
     }
 
     private var dateFormatter: DateFormatter {

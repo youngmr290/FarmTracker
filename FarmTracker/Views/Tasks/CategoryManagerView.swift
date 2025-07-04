@@ -1,19 +1,24 @@
 import SwiftUI
+import CoreData
 
 struct CategoryManagerView: View {
-    @Binding var categories: [String]
-    var tasks: [Task]
+    @Environment(\.managedObjectContext) private var ctx
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Category.name, ascending: true)],
+        animation: .default
+    ) private var categories: FetchedResults<Category>
 
     @State private var alertMessage: String?
     @State private var showAlert = false
 
     var body: some View {
         List {
-            ForEach(categories, id: \.self) { category in
+            ForEach(categories) { category in
                 HStack {
-                    Text(category)
+                    Text(category.name ?? "")
                     Spacer()
-                    Text("(\(taskCount(for: category)))")
+                    Text("(\(category.tasks?.count ?? 0))")
                         .foregroundColor(.gray)
                     Button(action: {
                         handleDelete(category)
@@ -33,19 +38,14 @@ struct CategoryManagerView: View {
         }
     }
 
-    private func taskCount(for category: String) -> Int {
-        tasks.filter { $0.category == category }.count
-    }
-
-    private func handleDelete(_ category: String) {
-        let count = taskCount(for: category)
+    private func handleDelete(_ category: Category) {
+        let count = category.tasks?.count ?? 0
         if count > 0 {
-            alertMessage = "You cannot delete the category '\(category)' because it is still used by \(count) task(s)."
+            alertMessage = "You cannot delete the category '\(category.name)' because it is still used by \(count) task(s)."
             showAlert = true
         } else {
-            if let index = categories.firstIndex(of: category) {
-                categories.remove(at: index)
-            }
+            ctx.delete(category)
+            try? ctx.save()
         }
     }
 }

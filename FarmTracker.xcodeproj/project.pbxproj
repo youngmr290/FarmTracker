@@ -15,7 +15,6 @@
 		42B91AA22DE0B01100AAE2FD /* FarmTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AA12DE0B01100AAE2FD /* FarmTrackerUITests.swift */; };
 		42B91AB02DE0B75700AAE2FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AAF2DE0B75700AAE2FD /* LoginView.swift */; };
 		42B91AB22DE0B78900AAE2FD /* TaskDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB12DE0B78900AAE2FD /* TaskDashboardView.swift */; };
-		42B91AB82DE0B7E000AAE2FD /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */; };
 		42B91ABA2DE0B80300AAE2FD /* TaskMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AB92DE0B80300AAE2FD /* TaskMapView.swift */; };
 		42B91AC02DE0BBF600AAE2FD /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */; };
 		42B91AC22DE0BF2300AAE2FD /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */; };
@@ -64,7 +63,6 @@
 		42B91AA32DE0B01100AAE2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42B91AAF2DE0B75700AAE2FD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		42B91AB12DE0B78900AAE2FD /* TaskDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDashboardView.swift; sourceTree = "<group>"; };
-		42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		42B91AB92DE0B80300AAE2FD /* TaskMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMapView.swift; sourceTree = "<group>"; };
 		42B91ABF2DE0BBF600AAE2FD /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		42B91AC12DE0BF2300AAE2FD /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 		42B91AC82DE34CFF00AAE2FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				42B91AB72DE0B7E000AAE2FD /* TaskModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,7 +364,6 @@
 				42B91AD62DE88F5500AAE2FD /* LogFeedView.swift in Sources */,
 				42B91AD82DE88F9D00AAE2FD /* FeedSummaryView.swift in Sources */,
 				42B91ABA2DE0B80300AAE2FD /* TaskMapView.swift in Sources */,
-				42B91AB82DE0B7E000AAE2FD /* TaskModel.swift in Sources */,
 				42B91AE32E0D8D2700AAE2FD /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,28 +1,21 @@
 import SwiftUI
-import CoreLocation
+import CoreData
 
 struct TaskDashboardView: View {
-    @State private var allTasks: [Task] = []
-    @State private var categories: [String] = []
-    @State private var showingAddTaskSheet = false
+    @Environment(\.managedObjectContext) private var ctx
 
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("📝 All Tasks", destination: AllTasksView(tasks: $allTasks, categories: categories))
-                NavigationLink("🗺 Task Map", destination: TaskMapView(tasks: allTasks))
-                NavigationLink("🗂 Manage Categories", destination: CategoryManagerView(categories: $categories, tasks: allTasks))
+                NavigationLink("📝 All Tasks", destination: AllTasksView())
+                NavigationLink("🗺 Task Map", destination: TaskMapView())
+                NavigationLink("🗂 Manage Categories", destination: CategoryManagerView())
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Task Tracker")
-            .navigationBarItems(trailing: Button(action: {
-                showingAddTaskSheet = true
-            }) {
+            .navigationBarItems(trailing: NavigationLink(destination: AddTaskView()) {
                 Image(systemName: "plus")
             })
-            .sheet(isPresented: $showingAddTaskSheet) {
-                AddTaskView(tasks: $allTasks, categories: $categories)
-            }
         }
     }
 }
