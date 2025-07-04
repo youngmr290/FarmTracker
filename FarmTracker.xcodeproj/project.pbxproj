@@ -29,6 +29,10 @@
 		42B91AE12E0D7E1B00AAE2FD /* FeedPaddock+Computed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AE02E0D7E1B00AAE2FD /* FeedPaddock+Computed.swift */; };
 		42B91AE32E0D8D2700AAE2FD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AE22E0D8D2700AAE2FD /* PersistenceController.swift */; };
 		42B91AEA2E123B9D00AAE2FD /* FarmTrackerData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42B91ADC2E0CEC0A00AAE2FD /* FarmTrackerData.xcdatamodeld */; };
+		42B91AEF2E17FB9400AAE2FD /* AddVaccinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AEE2E17FB9400AAE2FD /* AddVaccinationView.swift */; };
+		42B91AF12E17FBC000AAE2FD /* VaccinationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AF02E17FBC000AAE2FD /* VaccinationListView.swift */; };
+		42B91AF32E17FD0D00AAE2FD /* imageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AF22E17FD0D00AAE2FD /* imageWrapper.swift */; };
+		42B91AF52E1807AA00AAE2FD /* VaccinationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AF42E1807AA00AAE2FD /* VaccinationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		42B91ADD2E0CEC0B00AAE2FD /* FarmTrackerData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FarmTrackerData.xcdatamodel; sourceTree = "<group>"; };
 		42B91AE02E0D7E1B00AAE2FD /* FeedPaddock+Computed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedPaddock+Computed.swift"; sourceTree = "<group>"; };
 		42B91AE22E0D8D2700AAE2FD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		42B91AEE2E17FB9400AAE2FD /* AddVaccinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccinationView.swift; sourceTree = "<group>"; };
+		42B91AF02E17FBC000AAE2FD /* VaccinationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationListView.swift; sourceTree = "<group>"; };
+		42B91AF22E17FD0D00AAE2FD /* imageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageWrapper.swift; sourceTree = "<group>"; };
+		42B91AF42E1807AA00AAE2FD /* VaccinationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				42B91ADF2E0CF74000AAE2FD /* CoreData */,
-				42B91AC82DE34CFF00AAE2FD /* Models */,
+				42B91AC82DE34CFF00AAE2FD /* Extras */,
 				42B91AC72DE34CE800AAE2FD /* Views */,
 				42B91A842DE0AFF900AAE2FD /* FarmTrackerApp.swift */,
 				42B91A862DE0AFF900AAE2FD /* ContentView.swift */,
@@ -169,6 +177,7 @@
 		42B91AC72DE34CE800AAE2FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				42B91AED2E17FB6400AAE2FD /* Records */,
 				42B91ACA2DE34D3600AAE2FD /* Feed */,
 				42B91AC92DE34D1100AAE2FD /* Tasks */,
 				42B91ACB2DE34D6000AAE2FD /* HomeView.swift */,
@@ -176,11 +185,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		42B91AC82DE34CFF00AAE2FD /* Models */ = {
+		42B91AC82DE34CFF00AAE2FD /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				42B91AF22E17FD0D00AAE2FD /* imageWrapper.swift */,
 			);
-			path = Models;
+			path = Extras;
 			sourceTree = "<group>";
 		};
 		42B91AC92DE34D1100AAE2FD /* Tasks */ = {
@@ -216,6 +226,16 @@
 				42B91AE22E0D8D2700AAE2FD /* PersistenceController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		42B91AED2E17FB6400AAE2FD /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				42B91AEE2E17FB9400AAE2FD /* AddVaccinationView.swift */,
+				42B91AF02E17FBC000AAE2FD /* VaccinationListView.swift */,
+				42B91AF42E1807AA00AAE2FD /* VaccinationDetailView.swift */,
+			);
+			path = Records;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,8 +374,11 @@
 				42B91AC62DE20A4B00AAE2FD /* CategoryManagerView.swift in Sources */,
 				42B91A872DE0AFF900AAE2FD /* ContentView.swift in Sources */,
 				42B91AEA2E123B9D00AAE2FD /* FarmTrackerData.xcdatamodeld in Sources */,
+				42B91AF52E1807AA00AAE2FD /* VaccinationDetailView.swift in Sources */,
 				42B91ACE2DE34F7E00AAE2FD /* FeedDashboardView.swift in Sources */,
+				42B91AEF2E17FB9400AAE2FD /* AddVaccinationView.swift in Sources */,
 				42B91A852DE0AFF900AAE2FD /* FarmTrackerApp.swift in Sources */,
+				42B91AF12E17FBC000AAE2FD /* VaccinationListView.swift in Sources */,
 				42B91AE12E0D7E1B00AAE2FD /* FeedPaddock+Computed.swift in Sources */,
 				42B91AB22DE0B78900AAE2FD /* TaskDashboardView.swift in Sources */,
 				42B91AC22DE0BF2300AAE2FD /* EditTaskView.swift in Sources */,
@@ -364,6 +387,7 @@
 				42B91AD62DE88F5500AAE2FD /* LogFeedView.swift in Sources */,
 				42B91AD82DE88F9D00AAE2FD /* FeedSummaryView.swift in Sources */,
 				42B91ABA2DE0B80300AAE2FD /* TaskMapView.swift in Sources */,
+				42B91AF32E17FD0D00AAE2FD /* imageWrapper.swift in Sources */,
 				42B91AE32E0D8D2700AAE2FD /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

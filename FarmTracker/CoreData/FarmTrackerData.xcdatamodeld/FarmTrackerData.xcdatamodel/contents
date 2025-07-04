@@ -37,10 +37,20 @@
         <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="tasks" inverseEntity="Category"/>
     </entity>
+    <entity name="VaccinationRecord" representedClassName="VaccinationRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="animalClass" attributeType="String"/>
+        <attribute name="batchNumber" optional="YES" attributeType="String"/>
+        <attribute name="dateGiven" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="numberOfStock" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="product" attributeType="String"/>
+    </entity>
     <elements>
+        <element name="Category" positionX="-18" positionY="81" width="128" height="74"/>
         <element name="FeedLogEntry" positionX="-63" positionY="-18" width="128" height="149"/>
         <element name="FeedPaddock" positionX="-54" positionY="-9" width="128" height="164"/>
         <element name="TaskEntry" positionX="-36" positionY="9" width="128" height="164"/>
-        <element name="Category" positionX="-18" positionY="81" width="128" height="74"/>
+        <element name="VaccinationRecord" positionX="0" positionY="108" width="128" height="134"/>
     </elements>
 </model>

@@ -19,6 +19,8 @@ struct HomeView: View {
                             Text("🐑 Feed Tracker")
                         }
                     )
+                    
+                    NavigationLink("💉 Husbandry Records", destination: VaccinationListView())
                 }
             }
             .listStyle(GroupedListStyle())
