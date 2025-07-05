@@ -33,6 +33,11 @@
 		42B91AF12E17FBC000AAE2FD /* VaccinationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AF02E17FBC000AAE2FD /* VaccinationListView.swift */; };
 		42B91AF32E17FD0D00AAE2FD /* imageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AF22E17FD0D00AAE2FD /* imageWrapper.swift */; };
 		42B91AF52E1807AA00AAE2FD /* VaccinationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AF42E1807AA00AAE2FD /* VaccinationDetailView.swift */; };
+		42B91AF82E194E7200AAE2FD /* VehicleManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AF72E194E7200AAE2FD /* VehicleManagerView.swift */; };
+		42B91AFA2E194E8700AAE2FD /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AF92E194E8700AAE2FD /* AddVehicleView.swift */; };
+		42B91AFC2E194E9E00AAE2FD /* VehicleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AFB2E194E9E00AAE2FD /* VehicleDetailView.swift */; };
+		42B91AFE2E194EC100AAE2FD /* AddMaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AFD2E194EC100AAE2FD /* AddMaintenanceView.swift */; };
+		42B91B002E194EDD00AAE2FD /* MaintenanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AFF2E194EDD00AAE2FD /* MaintenanceListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +90,11 @@
 		42B91AF02E17FBC000AAE2FD /* VaccinationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationListView.swift; sourceTree = "<group>"; };
 		42B91AF22E17FD0D00AAE2FD /* imageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageWrapper.swift; sourceTree = "<group>"; };
 		42B91AF42E1807AA00AAE2FD /* VaccinationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationDetailView.swift; sourceTree = "<group>"; };
+		42B91AF72E194E7200AAE2FD /* VehicleManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleManagerView.swift; sourceTree = "<group>"; };
+		42B91AF92E194E8700AAE2FD /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
+		42B91AFB2E194E9E00AAE2FD /* VehicleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailView.swift; sourceTree = "<group>"; };
+		42B91AFD2E194EC100AAE2FD /* AddMaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaintenanceView.swift; sourceTree = "<group>"; };
+		42B91AFF2E194EDD00AAE2FD /* MaintenanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +187,7 @@
 		42B91AC72DE34CE800AAE2FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				42B91AF62E194E4E00AAE2FD /* Maintenance */,
 				42B91AED2E17FB6400AAE2FD /* Records */,
 				42B91ACA2DE34D3600AAE2FD /* Feed */,
 				42B91AC92DE34D1100AAE2FD /* Tasks */,
@@ -236,6 +247,18 @@
 				42B91AF42E1807AA00AAE2FD /* VaccinationDetailView.swift */,
 			);
 			path = Records;
+			sourceTree = "<group>";
+		};
+		42B91AF62E194E4E00AAE2FD /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				42B91AF72E194E7200AAE2FD /* VehicleManagerView.swift */,
+				42B91AF92E194E8700AAE2FD /* AddVehicleView.swift */,
+				42B91AFB2E194E9E00AAE2FD /* VehicleDetailView.swift */,
+				42B91AFD2E194EC100AAE2FD /* AddMaintenanceView.swift */,
+				42B91AFF2E194EDD00AAE2FD /* MaintenanceListView.swift */,
+			);
+			path = Maintenance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B91AFE2E194EC100AAE2FD /* AddMaintenanceView.swift in Sources */,
 				42B91AC02DE0BBF600AAE2FD /* AddTaskView.swift in Sources */,
 				42B91AB02DE0B75700AAE2FD /* LoginView.swift in Sources */,
 				42B91ADA2DE89BE500AAE2FD /* ListManagerView.swift in Sources */,
+				42B91AFC2E194E9E00AAE2FD /* VehicleDetailView.swift in Sources */,
 				42B91ACC2DE34D6000AAE2FD /* HomeView.swift in Sources */,
 				42B91AC62DE20A4B00AAE2FD /* CategoryManagerView.swift in Sources */,
 				42B91A872DE0AFF900AAE2FD /* ContentView.swift in Sources */,
@@ -378,11 +403,14 @@
 				42B91ACE2DE34F7E00AAE2FD /* FeedDashboardView.swift in Sources */,
 				42B91AEF2E17FB9400AAE2FD /* AddVaccinationView.swift in Sources */,
 				42B91A852DE0AFF900AAE2FD /* FarmTrackerApp.swift in Sources */,
+				42B91AFA2E194E8700AAE2FD /* AddVehicleView.swift in Sources */,
 				42B91AF12E17FBC000AAE2FD /* VaccinationListView.swift in Sources */,
 				42B91AE12E0D7E1B00AAE2FD /* FeedPaddock+Computed.swift in Sources */,
 				42B91AB22DE0B78900AAE2FD /* TaskDashboardView.swift in Sources */,
 				42B91AC22DE0BF2300AAE2FD /* EditTaskView.swift in Sources */,
+				42B91AF82E194E7200AAE2FD /* VehicleManagerView.swift in Sources */,
 				42B91AC42DE0C06800AAE2FD /* AllTasksView.swift in Sources */,
+				42B91B002E194EDD00AAE2FD /* MaintenanceListView.swift in Sources */,
 				42B91AD02DE8846C00AAE2FD /* AddEditPaddockView.swift in Sources */,
 				42B91AD62DE88F5500AAE2FD /* LogFeedView.swift in Sources */,
 				42B91AD82DE88F9D00AAE2FD /* FeedSummaryView.swift in Sources */,

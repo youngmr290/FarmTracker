@@ -21,6 +21,10 @@ struct HomeView: View {
                     )
                     
                     NavigationLink("💉 Husbandry Records", destination: VaccinationListView())
+                    
+                    NavigationLink("🛠 Machinery Maintenance",
+                                   destination: MaintenanceListView())
+
                 }
             }
             .listStyle(GroupedListStyle())
