@@ -38,6 +38,7 @@
 		42B91AFC2E194E9E00AAE2FD /* VehicleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AFB2E194E9E00AAE2FD /* VehicleDetailView.swift */; };
 		42B91AFE2E194EC100AAE2FD /* AddMaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AFD2E194EC100AAE2FD /* AddMaintenanceView.swift */; };
 		42B91B002E194EDD00AAE2FD /* MaintenanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91AFF2E194EDD00AAE2FD /* MaintenanceListView.swift */; };
+		42B91B032E379F8200AAE2FD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B91B022E379F8200AAE2FD /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		42B91AFB2E194E9E00AAE2FD /* VehicleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailView.swift; sourceTree = "<group>"; };
 		42B91AFD2E194EC100AAE2FD /* AddMaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaintenanceView.swift; sourceTree = "<group>"; };
 		42B91AFF2E194EDD00AAE2FD /* MaintenanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceListView.swift; sourceTree = "<group>"; };
+		42B91B022E379F8200AAE2FD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +155,6 @@
 				42B91A882DE0B01000AAE2FD /* Assets.xcassets */,
 				42B91A8D2DE0B01000AAE2FD /* Info.plist */,
 				42B91A8A2DE0B01000AAE2FD /* Preview Content */,
-				42B91AAF2DE0B75700AAE2FD /* LoginView.swift */,
 			);
 			path = FarmTracker;
 			sourceTree = "<group>";
@@ -187,6 +188,7 @@
 		42B91AC72DE34CE800AAE2FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				42B91B012E379C8C00AAE2FD /* Auth */,
 				42B91AF62E194E4E00AAE2FD /* Maintenance */,
 				42B91AED2E17FB6400AAE2FD /* Records */,
 				42B91ACA2DE34D3600AAE2FD /* Feed */,
@@ -259,6 +261,15 @@
 				42B91AFF2E194EDD00AAE2FD /* MaintenanceListView.swift */,
 			);
 			path = Maintenance;
+			sourceTree = "<group>";
+		};
+		42B91B012E379C8C00AAE2FD /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				42B91AAF2DE0B75700AAE2FD /* LoginView.swift */,
+				42B91B022E379F8200AAE2FD /* AuthService.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +428,7 @@
 				42B91ABA2DE0B80300AAE2FD /* TaskMapView.swift in Sources */,
 				42B91AF32E17FD0D00AAE2FD /* imageWrapper.swift in Sources */,
 				42B91AE32E0D8D2700AAE2FD /* PersistenceController.swift in Sources */,
+				42B91B032E379F8200AAE2FD /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
